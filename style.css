@@ -1,0 +1,247 @@
+:root {
+    --color-bkg-body: grey;
+    --color-white: white;
+    --color-effect-github: #695c5a;
+    --color-effect-linkedin: #3656e6;
+    --color-effect-twitter: #00aced;
+    --color-nav-scroll: rgba(0, 0, 0, 0.698);
+    --height-nav: 12vh;
+    --header-bkg-img: url(./images/portfolio_bkg.png);
+    --sect1-bkg-img: url(./images/bkg_section_opt1.jpg);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    color: var(--color-white);
+    font-family: 'Abel', Helvetica, Arial, Lucida, sans-serif;
+    width: 100%;
+}
+
+/* --------------- */
+/*   H E A D E R   */
+/* --------------- */
+
+header {
+    background-image: var(--header-bkg-img);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: var(--height-nav);
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+/* 
+.nav-logo {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-variant: small-caps;
+    margin-top: 2%;
+    padding-left: 1.5%;
+    width: 30%;
+}
+
+.logo {
+    background-image: url(/images/logo.png);
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    border: 0.5px solid rgba(0, 0, 0, 0.274);
+    border: 0.5px solid white;
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem;
+}
+
+.myself {
+    margin-left: 2vw;
+}
+
+.myself>p:first-of-type {
+    font-size: 70%;
+    font-weight: 700;
+}
+
+.myself>p {
+    line-height: 0;
+    font-size: 0.7rem;
+} 
+*/
+
+nav>ul {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    width: 70%;
+}
+
+nav>ul>li {
+    color: var(--color-white);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    list-style: none;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+}
+
+nav>ul>li:first-of-type {
+    border-color: #9fb2da;
+}
+
+nav>ul>li:hover {
+    border-color: #9fb2da;
+    transition: border 0.3s ease-in;
+}
+
+nav.scrolling {
+    background-color: var(--color-nav-scroll);
+}
+
+nav>ul>li>a {
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+.header-intro {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--height-nav));
+    line-height: 3rem;
+    justify-content: center;
+    position: relative;
+    top: var(--height-nav);
+}
+
+.header-intro>h1 {
+    border-bottom: 5px solid white;
+    border-radius: 10%;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    line-height: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+    text-transform: capitalize;
+}
+
+.header-intro>p {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.social-emoticons {
+    align-items: center;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    width: 550px;
+}
+
+.wrapper {
+    margin-top: 1%;
+}
+
+.wrapper>ul {
+    display: flex;
+    list-style: none;
+}
+
+.wrapper ul li {
+    border: 3px solid #D8E2DC;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 55px;
+    margin: 0 10px;
+    text-align: center;
+    transition: all 0.5s ease;
+    width: 55px;
+}
+
+.wrapper ul li .fa {
+    color: #D8E2DC;
+    margin-top: 10px;
+    transition: all 0.5s ease;
+}
+
+/*twitter*/
+
+.wrapper ul li:hover.twitter {
+    border: 5px solid var(--color-effect-twitter);
+    box-shadow: 0 0 15px var(--color-effect-twitter);
+    transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-twitter {
+    color: var(--color-effect-twitter);
+    text-shadow: 0 0 15px var(--color-effect-twitter);
+    transition: all 0.5s ease;
+}
+
+/* github */
+
+.wrapper ul li:hover.github {
+    border: 5px solid var(--color-effect-github);
+    box-shadow: 0 0 15px var(--color-effect-github);
+    transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-github {
+    color: var(--color-effect-github);
+    text-shadow: 0 0 15px var(--color-effect-github);
+    transition: all 0.5s ease;
+}
+
+/* linkedin */
+
+.wrapper ul li:hover.linkedin {
+    border: 5px solid var(--color-effect-linkedin);
+    box-shadow: 0 0 15px var(--color-effect-linkedin);
+    transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-linkedin {
+    color: var(--color-effect-linkedin);
+    text-shadow: 0 0 15px var(--color-effect-linkedin);
+    transition: all 0.5s ease;
+}
+
+/* ---------------- */
+/*  S E C T I O N   */
+/* ---------------- */
+main>section:first-of-type {
+    background-image: var(--sect1-bkg-img);
+}
+
+/* --------------- */
+/*   F O O T E R   */
+/* --------------- */
+
+
+/* --------------- */
+/*     T E S T     */
+/* --------------- */
+h2 {
+    color: black;
+}

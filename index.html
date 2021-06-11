@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federico G. Lopez</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <!-- Social Emoticons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+<!--             <div class="nav-logo">
+                <div class="logo"></div>
+                <div class="myself">
+                    <p>Federico G. López</p>
+                    <br>
+                    <p>Fullstack Developer</p>
+                </div>
+            </div> -->
+            <ul>
+                <li>
+                    <a href="#header">about me</a>
+                </li>
+                <li>
+                    <a href="#section2">skills</a>
+                </li>
+                <li>
+                    <a href="#section3">experiencie</a>
+                </li>
+                <li>
+                    <a href="#section4">education</a>
+                </li>
+                <li>
+                    <a href="#section5">contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-intro">
+            <h1>
+                Federico G. López
+            </h1>
+            <p>Fullstack Web Developer | Cobol Mainframe Developer</p>
+            <div class="wrapper">
+                <ul>
+                    <li class="github">
+                        <a href="https://github.com/fedelopez89" target="_blank">
+                            <i class="fa fa-github fa-2x" aria-hidden="true">
+                            </i>
+                        </a>
+                    </li>
+                    <li class="linkedin">
+                        <a href="https://www.linkedin.com/in/federico-gabriel-l%C3%B3pez-b8754254/" target="_blank">
+                            <i class="fa fa-linkedin fa-2x" aria-hidden="true">
+                            </i>
+                        </a>
+                    </li>
+                    <li class="twitter">
+                        <a href="https://twitter.com/fedepincha73" target="_blank">
+                            <i class="fa fa-twitter fa-2x" aria-hidden="true">
+                            </i>
+                        </a>
+                    </li>                    
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="section1">
+            about me
+        </section>
+        <section id="section2">
+            <h2>skills</h2>
+        </section>
+        <section id="section3">
+            <h2>experiencie</h2>
+        </section>
+        <section id="section4">
+            <h2>education</h2>
+        </section>
+        <section id="section5">
+            <h2>contact</h2>
+        </section>
+    </main>
+    <footer>
+        <h5>© Federico López - Todos los derechos reservados</h5>
+    </footer>
+</body>
+
+<script>
+    window.addEventListener('scroll' , function(){
+        const nav = document.querySelector('nav');
+        const heigth = 100;
+        nav.classList.toggle('scrolling', window.scrollY >= heigth)
+    })
+</script>
+
+</html>
