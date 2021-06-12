@@ -16,31 +16,26 @@
 </head>
 
 <body>
-    <header id="header">
+    <header id="home">
         <nav>
-<!--             <div class="nav-logo">
-                <div class="logo"></div>
-                <div class="myself">
-                    <p>Federico G. López</p>
-                    <br>
-                    <p>Fullstack Developer</p>
-                </div>
-            </div> -->
             <ul>
                 <li>
-                    <a href="#header">about me</a>
+                    <a href="#home">home</a>
                 </li>
                 <li>
-                    <a href="#section2">skills</a>
+                    <a href="#aboutme">about me</a>
                 </li>
                 <li>
-                    <a href="#section3">experiencie</a>
+                    <a href="#skills">skills</a>
                 </li>
                 <li>
-                    <a href="#section4">education</a>
+                    <a href="#experience">experiencie</a>
                 </li>
                 <li>
-                    <a href="#section5">contact</a>
+                    <a href="#education">education</a>
+                </li>
+                <li>
+                    <a href="#contact">contact</a>
                 </li>
             </ul>
         </nav>
@@ -68,26 +63,40 @@
                             <i class="fa fa-twitter fa-2x" aria-hidden="true">
                             </i>
                         </a>
-                    </li>                    
+                    </li>
                 </ul>
             </div>
         </div>
     </header>
     <main>
-        <section id="section1">
-            about me
+        <section id="aboutme">
+            <div class="about-me-description">
+                <h1>&lt; about me /&gt;</h1>
+                <p>Hi! I am <strong><u>Federico López</u></strong>.</p>
+                <br>
+                <p>I´m fullstack web developer and Mainframe Cobol Developer with more
+                    than ten years of experience in technology providing my services within
+                    the banking area.</p>
+                <p>I am a passionate individual always wanting to learn more about software
+                    engineering and computer science. I consider myself a quick learner 
+                    always setting out challenges to learn different programming concepts
+                    and to find a more efficient way of solving problems.</p>
+            </div>
+            <div class='about-photo'>
+                <img src="./images/photo__01.jpeg" alt="photo-perfil" srcset="">
+            </div>
         </section>
-        <section id="section2">
-            <h2>skills</h2>
+        <section id="skills">
+            <h1>&lt; skills /&gt;</h1>
         </section>
-        <section id="section3">
-            <h2>experiencie</h2>
+        <section id="experience">
+            <h1>experiencie</h1>
         </section>
-        <section id="section4">
-            <h2>education</h2>
+        <section id="education">
+            <h1>education</h1>
         </section>
-        <section id="section5">
-            <h2>contact</h2>
+        <section id="contact">
+            <h1>contact</h1>
         </section>
     </main>
     <footer>
@@ -96,7 +105,7 @@
 </body>
 
 <script>
-    window.addEventListener('scroll' , function(){
+    window.addEventListener('scroll', function () {
         const nav = document.querySelector('nav');
         const heigth = 100;
         nav.classList.toggle('scrolling', window.scrollY >= heigth)
