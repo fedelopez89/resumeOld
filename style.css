@@ -5,7 +5,7 @@
     --color-effect-linkedin: #3656e6;
     --color-effect-twitter: #00aced;
     --color-li-underline: #9fb2da;
-    --color-nav-scroll: rgba(0, 0, 0, 0.95);
+    --color-nav-scroll: rgba(0, 0, 0, 0.96);
     --font-raleway: 'Raleway', sans-serif;
     --font-default: 'Abel', Helvetica, Arial, Lucida, sans-serif;
     --height-nav: 11vh;
@@ -28,7 +28,9 @@ html, body {
 }
 
 /* --------------- */
+
 /*   H E A D E R   */
+
 /* --------------- */
 
 header {
@@ -196,8 +198,11 @@ nav>ul>li>a {
 }
 
 /* ---------------- */
+
 /*  S E C T I O N   */
+
 /* ---------------- */
+
 main>section {
     min-height: 100vh;
     scroll-margin-top: 5vh;
@@ -213,9 +218,12 @@ main>section>h1 {
 }
 
 /* -------- */
+
 /* ABOUT ME */
+
 /* -------- */
-#aboutme{
+
+#aboutme {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -225,7 +233,7 @@ main>section>h1 {
     padding: 0 3vw 0 5vw;
 }
 
-main>section>div>h1{
+main>section>div>h1 {
     letter-spacing: 1rem;
     text-transform: uppercase;
 }
@@ -265,18 +273,158 @@ main>section>div>h1{
     box-shadow: -2px 1px 5px 2px rgba(0, 0, 0, 0.596);
 }
 
-
 /* @media (min-width: 1000px).aboutme {
     :window-inactive
-}
- */
+} */
+
 /* -------- */
 /*  SKILLS  */
 /* -------- */
 
+#skills {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+    max-height: 95vh;
+    background: whitesmoke;
+}
+
+.skills-all {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 95vh;
+    max-height: 95vh;
+}
+
+.skills-all>h1 {
+    align-self: center;
+    border: 2px solid var(--color-li-underline);
+    font-size: 2em;
+    font-weight: 600;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.skills-details {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skills-details>div>h4 {
+    border-top: 2px solid var(--color-li-underline);
+    border-bottom: 2px solid var(--color-li-underline);
+    display: inline;
+    letter-spacing: .4rem;
+    padding: 5px 0;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+
+.skills-details>div>h5 {
+    text-transform: capitalize;
+    font-weight: lighter;
+}
+
+.skill-separator {
+    width: 20%;
+}
+
+.skill-item {
+    font-variant: small-caps;
+    padding-bottom: 10px;
+}
+
+.skill-item:first-of-type {
+    padding-top: 30px;
+}
+
+.skill-item-bar {
+    background: black;
+    border-radius: 20px;
+    height: 8px;
+    width: 100%;
+}
+
+progress[value] {
+    /* Get rid of the default appearance */
+    appearance: none;
+    /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
+    border: none;
+    /* Add dimensions */
+    height: 8px;
+    width: 100%;
+    /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
+    background-color: whiteSmoke;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
+    /* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
+    color: cornflowerblue;
+    position: relative;
+}
+
+/*
+Webkit browsers provide two pseudo classes that can be use to style HTML5 progress element.
+-webkit-progress-bar -> To style the progress element container
+-webkit-progress-value -> To style the progress element value.
+*/
+
+progress[value]::-webkit-progress-bar {
+    background-color: whiteSmoke;
+    border: 0.5px solid grey;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
+}
+
+progress[value]::-webkit-progress-value {
+    animation: animate-stripes 5s linear infinite;
+    background-color: cornflowerblue;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius: 3px;
+    position: relative;
+}
+
+@keyframes animate-stripes {
+    100% {
+        background-position: -100px 0;
+    }
+}
+
+h5[data-value] {
+    position: relative;
+}
+
+h5[data-value]:after {
+    content: attr(data-value) '%';
+    font-size: .83em;
+    text-transform: capitalize;
+    font-weight: lighter;    
+    position: absolute;
+    right: 0;
+}
+
 /* ---------- */
 /* EXPERIENCE */
 /* ---------- */
+#experience {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;    
+    min-height: 95vh;
+    padding: 0 8vw;
+}
+
+#experience>h1 {
+    border: 2px solid var(--color-li-underline);
+    font-size: 2em;
+    font-weight: 600;
+    padding: 10px 15px;
+    text-align: center;
+}
 
 /* --------- */
 /* EDUCATION */
@@ -289,7 +437,6 @@ main>section>div>h1{
 /* --------------- */
 /*   F O O T E R   */
 /* --------------- */
-
 
 /* --------------- */
 /*     T E S T     */
