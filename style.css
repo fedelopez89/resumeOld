@@ -58,17 +58,17 @@ nav>ul {
     display: flex;
     justify-content: space-around;
     overflow: hidden;
-    width: 75%;
+    width: 76%;
 }
 
 nav>ul>li {
     color: var(--color-white);
+    border-bottom: 3px solid transparent;
     font-family: var(--font-raleway);
     font-weight: 600;
     letter-spacing: 0.05em;
     list-style: none;
     text-transform: uppercase;
-    border-bottom: 3px solid transparent;
 }
 
 nav>ul>li:first-of-type {
@@ -198,9 +198,7 @@ nav>ul>li>a {
 }
 
 /* ---------------- */
-
 /*  S E C T I O N   */
-
 /* ---------------- */
 
 main>section {
@@ -253,7 +251,7 @@ main>section>div>h1 {
 
 .about-me-description>p {
     color: #dddddd;
-    font-size: 1.3em;
+    font-size: 1.1em;
     line-height: 2;
 }
 
@@ -282,12 +280,12 @@ main>section>div>h1 {
 /* -------- */
 
 #skills {
+    background: whitesmoke;
     color: black;
     display: flex;
     flex-direction: column;
     min-height: 95vh;
     max-height: 95vh;
-    background: whitesmoke;
 }
 
 .skills-all {
@@ -304,6 +302,7 @@ main>section>div>h1 {
     border: 2px solid var(--color-li-underline);
     font-size: 2em;
     font-weight: 600;
+    margin-top: 15px;
     padding: 10px 15px;
     text-align: center;
 }
@@ -311,6 +310,7 @@ main>section>div>h1 {
 .skills-details {
     display: flex;
     justify-content: space-evenly;
+    padding-bottom: 40px;
 }
 
 .skills-details>div>h4 {
@@ -334,6 +334,8 @@ main>section>div>h1 {
 }
 
 .skill-item {
+    /* test */
+    max-width: 180px;
     font-variant: small-caps;
     padding-bottom: 10px;
 }
@@ -360,7 +362,7 @@ progress[value] {
     /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
     background-color: whiteSmoke;
     border-radius: 3px;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
+    box-shadow: 0 2px 3px rgba(158, 72, 72, 0.5) inset;
     /* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
     color: cornflowerblue;
     position: relative;
@@ -376,7 +378,7 @@ progress[value]::-webkit-progress-bar {
     background-color: whiteSmoke;
     border: 0.5px solid grey;
     border-radius: 3px;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .3) inset;
 }
 
 progress[value]::-webkit-progress-value {
@@ -415,28 +417,255 @@ h5[data-value]:after {
     flex-direction: column;
     justify-content: space-evenly;    
     min-height: 95vh;
-    padding: 0 8vw;
+    padding: 10vh 5vw;
 }
 
-#experience>h1 {
+.exp-title {
+    display: flex;
+    justify-content: center;
+}
+
+.exp-title>h1 {
+    align-self: center;
     border: 2px solid var(--color-li-underline);
     font-size: 2em;
     font-weight: 600;
-    padding: 10px 15px;
-    text-align: center;
+    margin-bottom: 6vh;
+    padding: 8px 15px;
 }
+
+.exp-form {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin: 12px 0;
+    width: 80%;
+}
+
+.exp-details-left {
+    min-width: 30%;
+    max-width: 30%;
+    border-right: 3px solid var(--color-li-underline);
+}
+
+.exp-details {
+    display: flex;
+    flex-direction: row;
+    margin: 12px 0;
+    padding: 20px 30px;
+}
+
+.exp-details-left>h5 {
+    font-size: .75em;
+    font-weight: 100;
+    margin: 5px 0 15px 0px;
+    text-transform: uppercase;
+}
+
+.exp-details-left>h5::before {
+    content: '..... ';
+    color: transparent;
+    width: 20px;
+    height: 20px;
+    background-image: url('./images/calendar.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.exp-details-left>h6 {
+    font-style: italic;
+}
+
+.exp-details-left>h6::before {
+    content: '..... ';
+    color: transparent;
+    width: 20px;
+    height: 20px;
+    background-image: url('./images/location.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.exp-details-right {
+    padding-left: 35px;
+}
+
+.exp-details-right>h4 {
+    display: inline;
+    font-weight: 700;
+    border-bottom: 2px dotted var(--color-li-underline);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.exp-details-right>h5 {
+    color: black;
+    font-weight: 800;
+    margin: 11px 0 15px 0;
+    text-transform: uppercase;
+}
+
+.exp-details-right>p {
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
 
 /* --------- */
 /* EDUCATION */
 /* --------- */
+#education {
+	background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;    
+    min-height: 95vh;
+    padding: 10vh 5vw;
+}
+
+.edu-title {
+    display: flex;
+    justify-content: center;
+}
+
+.edu-title>h1 {
+    align-self: center;
+    border: 2px solid var(--color-li-underline);
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 6vh;
+    padding: 8px 15px;
+}
+
+.edu-form {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin: 12px 0;
+    width: 80%;
+}
+
+.edu-details-left {
+    min-width: 30%;
+    max-width: 30%;
+    border-right: 3px solid var(--color-li-underline);
+}
+
+.edu-details {
+    display: flex;
+    flex-direction: row;
+    margin: 12px 0;
+    padding: 20px 30px;
+}
+
+.edu-details-left>h5 {
+    font-size: .75em;
+    font-weight: 100;
+    margin: 5px 0 15px 0px;
+    text-transform: uppercase;
+}
+
+.edu-details-left>h5::before {
+    content: '..... ';
+    color: transparent;
+    width: 20px;
+    height: 20px;
+    background-image: url('./images/calendar.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.edu-details-left>h6 {
+    font-style: italic;
+}
+
+.edu-details-left>h6::before {
+    content: '..... ';
+    color: transparent;
+    width: 20px;
+    height: 20px;
+    background-image: url('./images/location.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.edu-details-right {
+    padding-left: 35px;
+}
+
+.edu-details-right>h4 {
+    display: inline;
+    font-weight: 700;
+    border-bottom: 2px dotted var(--color-li-underline);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.edu-details-right>h5 {
+    color: black;
+    font-weight: 800;
+    margin: 11px 0 15px 0;
+    text-transform: uppercase;
+}
+
+.edu-details-right>p {
+    font-size: 0.8em;
+}
 
 /* ------- */
 /* CONTACT */
 /* ------- */
+#contact {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+    min-height: 95vh;
+    padding: 10vh 5vw;
+}
+
+.contact-title {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-title>h1 {
+    align-self: center;
+    border: 2px solid var(--color-li-underline);
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 6vh;
+    padding: 8px 15px;
+}
 
 /* --------------- */
 /*   F O O T E R   */
 /* --------------- */
+footer {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: row;
+    font-weight: 100;
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+    justify-content: center;
+    min-height: 4em;
+    padding: 20px 0;
+}
+
+.footer-contact>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
 
 /* --------------- */
 /*     T E S T     */
