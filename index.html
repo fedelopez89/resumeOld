@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Federico G. Lopez</title>
-    <!-- Css -->
-    <link rel="stylesheet" href="style.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <!-- Social Emoticons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
 </head>
 
 <body>
@@ -20,10 +23,10 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#home">home</a>
+                    <a href="#home" class='buttonNav'>home</a>
                 </li>
                 <li>
-                    <a href="#aboutme">about me</a>
+                    <a href="#aboutme" class='buttonNav'>about me</a>
                 </li>
                 <li>
                     <a href="#skills">skills</a>
@@ -58,7 +61,7 @@
                             </i>
                         </a>
                     </li>
-<!--                     <li class="twitter">
+                    <!--                     <li class="twitter">
                         <a href="https://twitter.com/fedepincha73" target="_blank">
                             <i class="fa fa-twitter fa-2x" aria-hidden="true">
                             </i>
@@ -378,6 +381,7 @@
             <div class="contact-title">
                 <h1>&lt; contact /&gt;</h1>
             </div>
+            <!-- <p>Or you can get in touch with me at <strong><u>fede.lopez89@gmail.com</u></strong></p> -->
         </section>
     </main>
     <footer>
@@ -385,16 +389,35 @@
             <h5>© 2021 Federico López. All rights reserved.</h5>
             <div class="footer-contact">
                 <ul>
-                    <li>email</li>
-                    <li>linkedin</li>
-                    <li>github</li>
-                    <li>twitter</li>
+                    <li class="correo">
+                        <a href="mailto:fede.lopez89@gmail.com" target="_blank">
+                            <i class="fa fa-envelope fa-2x" aria-hidden="true">
+                            </i>
+                        </a>
+                    </li>
+                    <li class="linkedin">
+                        <a href="https://www.linkedin.com/in/federico-gabriel-l%C3%B3pez-b8754254/" target="_blank">
+                            <i class="fa fa-linkedin fa-2x" aria-hidden="true">
+                            </i>
+                        </a>
+                    </li>
+                    <li class="github">
+                        <a href="https://github.com/fedelopez89" target="_blank">
+                            <i class="fa fa-github fa-2x" aria-hidden="true">
+                            </i>
+                        </a>
+                    </li>
+                    <li class="phone">
+                        <a href="https://api.whatsapp.com/send?phone=+5491155019617" target="_blank">
+                            <i class="fas fa-phone fa-2x" aria-hidden="true">
+                            </i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </footer>
 </body>
-
 <script>
     window.addEventListener('scroll', function () {
         const nav = document.querySelector('nav');

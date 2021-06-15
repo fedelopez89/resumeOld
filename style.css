@@ -56,9 +56,9 @@ nav {
 
 nav>ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     overflow: hidden;
-    width: 76%;
+    width: 100%;
 }
 
 nav>ul>li {
@@ -68,6 +68,7 @@ nav>ul>li {
     font-weight: 600;
     letter-spacing: 0.05em;
     list-style: none;
+    margin: 0 10px;
     text-transform: uppercase;
 }
 
@@ -80,16 +81,16 @@ nav>ul>li:hover {
     transition: border 0.3s ease-in;
 }
 
-nav.scrolling {
-    background-color: var(--color-nav-scroll);
-}
-
 nav>ul>li>a {
     color: var(--color-white);
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-decoration: none;
+}
+
+nav.scrolling {
+    background-color: var(--color-nav-scroll);
 }
 
 .header-intro {
@@ -285,7 +286,6 @@ main>section>div>h1 {
     display: flex;
     flex-direction: column;
     min-height: 95vh;
-    max-height: 95vh;
 }
 
 .skills-all {
@@ -294,7 +294,6 @@ main>section>div>h1 {
     flex-direction: column;
     justify-content: space-around;
     min-height: 95vh;
-    max-height: 95vh;
 }
 
 .skills-all>h1 {
@@ -302,15 +301,15 @@ main>section>div>h1 {
     border: 2px solid var(--color-li-underline);
     font-size: 2em;
     font-weight: 600;
-    margin-top: 15px;
+    margin-top: 1%;
     padding: 10px 15px;
     text-align: center;
 }
 
 .skills-details {
     display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 40px;
+    justify-content: center;
+    padding-bottom: 2%;
 }
 
 .skills-details>div>h4 {
@@ -318,23 +317,20 @@ main>section>div>h1 {
     border-bottom: 2px solid var(--color-li-underline);
     display: inline;
     letter-spacing: .4rem;
-    padding: 5px 0;
+    padding-bottom: 5px;
     text-transform: uppercase;
-    text-align: center;
-    width: 100%;
 }
 
 .skills-details>div>h5 {
-    text-transform: capitalize;
     font-weight: lighter;
+    text-transform: capitalize;
 }
 
 .skill-separator {
-    width: 20%;
+    width: 22%;
 }
 
 .skill-item {
-    /* test */
     max-width: 180px;
     font-variant: small-caps;
     padding-bottom: 10px;
@@ -621,11 +617,12 @@ h5[data-value]:after {
 /* CONTACT */
 /* ------- */
 #contact {
+    align-items: center;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;    
-    min-height: 95vh;
+    justify-content: space-between;  
+    min-height: none;
     padding: 10vh 5vw;
 }
 
@@ -655,16 +652,33 @@ footer {
     font-size: 0.8em;
     letter-spacing: 0.2em;
     justify-content: center;
-    min-height: 4em;
-    padding: 20px 0;
+    min-height: 8em;
+    padding: 20px 0 30px 0;
+}
+
+#footer>h5 {
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .footer-contact>ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin-top: 10px;
+    justify-content: space-evenly;
+    margin-top: 15px;
     width: 100%;
+}
+
+.footer-contact>ul>li {
+    list-style: none;
+}
+
+.footer-contact>ul>li>a {
+    color: var(--color-li-underline);
+}
+
+.footer-contact>ul>li>a:hover {
+    color: cornflowerblue;
 }
 
 /* --------------- */
