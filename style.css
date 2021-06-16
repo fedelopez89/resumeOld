@@ -28,9 +28,7 @@ html, body {
 }
 
 /* --------------- */
-
 /*   H E A D E R   */
-
 /* --------------- */
 
 header {
@@ -120,6 +118,7 @@ nav.scrolling {
 .header-intro-roles {
     display: flex;
 }
+
 .header-intro-roles>p {
     font-size: 1.25rem;
     font-weight: 500;
@@ -201,15 +200,20 @@ nav.scrolling {
 /* ---------------- */
 
 main>section {
-    min-height: 100vh;
-    scroll-margin-top: 5vh;
+    scroll-margin-top: 10.5vh;
 }
 
+/* FGL - VER */
 main>section:nth-child(2n+1) {
     background-image: var(--sect1-bkg-img);
 }
 
 main>section>h1 {
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+}
+
+main>section>div>h1 {
     letter-spacing: 1rem;
     text-transform: uppercase;
 }
@@ -221,28 +225,24 @@ main>section>h1 {
 /* -------- */
 
 #aboutme {
-    align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    min-height: 95vh;
-}
-
-main>section>div>h1 {
-    letter-spacing: 1rem;
-    text-transform: uppercase;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 .about-me-description {
-    max-height: 100vh;
-    min-height: 70vh;
-    width: 52%;
+    padding: 20px;
+    padding-bottom: 0;
+    width: 50%;
 }
 
 .about-me-description>h1 {
     font-size: 2em;
     font-weight: 600;
+    line-height: 1.75em;
     text-align: center;
     margin-bottom: 6vh;
 }
@@ -254,30 +254,19 @@ main>section>div>h1 {
 }
 
 .about-photo {
-    margin: 0;
-    max-height: 100vh;
-    overflow: hidden;
-    padding: 15px 0;
+    align-self: center;
+    padding: 10px 0;
     text-align: center;
-    width: 47.66667%;
 }
 
 .about-photo>img {
     border-radius: 50%;
-    max-height: 75vh;
-    max-width: 75vw;
+    width: 80%;
     box-shadow: -2px 1px 5px 2px rgba(0, 0, 0, 0.596);
 }
 
-/* @media (min-width: 1000px){
-    .aboutme {
-        :window-inactive
-} */
-
 /* -------- */
-
 /*  SKILLS  */
-
 /* -------- */
 
 #skills {
@@ -690,7 +679,9 @@ form {
 }
 
 /* ------- */
+
 /*  MEDIA  */
+
 /* ------- */
 
 @media (min-width: 600px) {
@@ -918,10 +909,32 @@ footer {
 
 /* --------------- */
 
+@media (max-width: 768px) {
+    #aboutme {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .about-me-description {
+        padding: 0;
+        padding-top: 10px;
+        width: 85%;
+    }
+    
+    .about-me-description>h1 {
+        font-size: 1.75em;
+        font-weight: 600;
+        margin-bottom: 3vh;
+    }
+    .about-me-description>p {
+        font-size: 1em;
+        line-height: 1.65;
+    }    
+}
+
 @media (max-width: 620px) {
     nav>ul>li>a {
         font-size: 0.75em;
-        font-weight: normal;    
+        font-weight: normal;
         line-height: 1em;
     }
 }
@@ -940,8 +953,8 @@ footer {
     .header-intro-roles>p {
         font-size: 1.25em;
         line-height: 2em;
-    }   
-    .wrapper>ul>li>a>.fa-github, .fa-linkedin{
+    }
+    .wrapper>ul>li>a>.fa-github, .fa-linkedin {
         font-size: 1em;
     }
     .wrapper ul li {
@@ -950,10 +963,10 @@ footer {
         height: 35px;
         width: 35px;
         line-height: 35px;
-    }   
+    }
     .wrapper ul li .fa {
         margin-top: -50px;
-    }    
+    }
 }
 
 @media (max-width: 400px) {
@@ -970,7 +983,6 @@ footer {
     .header-intro>h1 {
         border-bottom: 0;
     }
-
     /* CONTACT */
     .contact-title>h1 {
         border: 0;
