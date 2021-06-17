@@ -91,7 +91,7 @@
         </section>
         <section id="skills">
             <div class="skills-all">
-                <h1>skills</h1>
+                <h1 class="titles">skills</h1>
                 <div class="skills-details">
                     <div class="skill-separator skill-mainframe">
                         <h4>mainframe</h4>
@@ -261,14 +261,14 @@
             </div>
         </section>
         <section id="experience">
-            <div class="exp-title">
+            <div class="exp-title" class="titles">
                 <h1>experience</h1>
             </div>
             <button>
-                <i class="fa fa-file-text fa-2x" aria-hidden="true">
+                <i class="fa fa-download fa-2x" aria-hidden="true">
                 </i>
                 <a href="./dowloads/Resume_LOPEZ_Federico.pdf" target="_blank">
-                    Download Resume
+                    RESUME
                 </a>
             </button>
             <div class="exp-form">
@@ -278,7 +278,7 @@
                         <h6>Buenos Aires, Argentina</h6>
                     </div>
                     <div class="exp-details-right">
-                        <h4>react js developer</h4>
+                        <h4>front-end web developer</h4>
                         <h5>icbc</h5>
                         <p>I started taking development on frontend tasks
                             in particular on ReactJs for an internal app in
@@ -348,7 +348,7 @@
         </section>
         <section id="education">
             <div class="edu-title">
-                <h1>education</h1>
+                <h1 class="titles">education</h1>
             </div>
             <div class="edu-form">
                 <div class="edu-details">
@@ -364,11 +364,11 @@
                 <div class="edu-details">
                     <div class="edu-details-left">
                         <h5>February 2015 - Present</h5>
-                        <h6>Buenos Aires, Argentina</h6>
+                        <h6>UTRN-FRBA. Buenos Aires, Argentina</h6>
                     </div>
                     <div class="edu-details-right">
                         <h4>Computer Systems Engineering</h4>
-                        <h5>National University Technology BA (UTN - FRBA)</h5>
+                        <h5>National University Technology BA</h5>
                         <p>Incompleted. Third year reached.</p>
                     </div>
                 </div>
@@ -378,7 +378,7 @@
                         <h6>Buenos Aires, Argentina</h6>
                     </div>
                     <div class="edu-details-right">
-                        <h4>Bachelor ́s degree in Business Administration</h4>
+                        <h4>high school program in Administration and Business</h4>
                         <h5>Institute Euskal-Echea</h5>
                     </div>
                 </div>
@@ -415,6 +415,10 @@
             <p>Or you can get in touch with me at <strong><u>fede.lopez89@gmail.com</u></strong>
             </p>
         </section>
+        <span>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">                
+            </button>
+        </span>
     </main>
     <footer>
         <div id="footer">
@@ -456,6 +460,26 @@
         const heigth = 100;
         nav.classList.toggle('scrolling', window.scrollY >= heigth)
     })
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+    
 </script>
 
 </html>
