@@ -27,6 +27,9 @@ html, body {
     width: 100%;
 }
 
+ol, ul {
+    padding-left: 0px!important;
+}
 /* --------------- */
 
 /*   H E A D E R   */
@@ -771,16 +774,22 @@ label {
     overflow: hidden;
 }
 
-.contact-form-control input, .contact-form-control textarea {
+.contact-form-control input, 
+.contact-form-control textarea {
     width: 100%;
     height: 55px;
     border: solid 1.5px var(--color-li-underline);
     border-radius: 10px;
     background-color: transparent;
-    color: #FFFFFF;
+    color: white;
     padding: 0 15px;
     position: relative;
     -webkit-transition: 300ms 0ms;
+}
+
+textarea.form-control {
+    padding-top: 10px;
+    height: 9em;
 }
 
 button, input {
@@ -816,12 +825,6 @@ input {
     border-image: initial; */
 }
 
-@media (min-width: 600px) {
-    .contact-form-control.textarea {
-        width: 100%;
-    }
-}
-
 .contact-form button {
     width: 240px;
     height: 50px;
@@ -848,7 +851,8 @@ input {
     -webkit-transition: 300ms 0ms;
 }
 
-[type=reset], [type=submit], button, html [type=button] {
+[type=reset], [type=submit], 
+button, html [type=button] {
     -webkit-appearance: button;
 }
 
@@ -880,16 +884,14 @@ button {
     /* margin: 0em;
     font: 400 13.3333px Arial; */
     padding: 1px 6px;
-    /* border-width: 2px;
+    border-width: 2px;
     border-style: outset;
     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial; */
+    border-image: initial;
 }
 
 /* --------------- */
-
 /*   F O O T E R   */
-
 /* --------------- */
 
 footer {
@@ -1036,6 +1038,12 @@ footer {
         font-weight: normal;
         line-height: 1em;
     }  
+}
+
+@media (min-width: 600px) {
+    .contact-form-control.textarea {
+        width: 100%;
+    }
 }
 
 @media (max-width: 530px) {

@@ -42,10 +42,10 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#education">EDUCATION</a>
-                        </li>                    
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">CONTACT</a>
-                        </li>                    
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -399,25 +399,24 @@
             <div class="container">
                 <form class="contact-form" onsubmit="javascript: return false;" method="post">
                     <div class="contact-form-control">
-                        <label>Name</label>
-                        <input type="text" name="name" id="name">
+                        <label></label>
+                        <input type="text" class="form-control" name="name" id="name" required placeholder="Fullname">
                     </div>
                     <div class="contact-form-control">
-                        <label>Email</label>
-                        <input type="email" name="email" id="email">
+                        <label></label>
+                        <input type="email" class="form-control" name="email" id="email" required placeholder="Email">
                     </div>
                     <div class="contact-form-control">
-                        <label>Phone</label>
-                        <input type="tel" name="phone" id="phone">
+                        <label></label>
+                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone">
                     </div>
                     <div class="contact-form-control textarea">
-                        <label>Message</label>
-                        <textarea name="message" id="message"></textarea>
-                        <span
-                            style="padding: 10px; display: flex; color: #f2f2f2; justify-content: flex-end">0/100</span>
+                        <label></label>
+                        <textarea class="form-control" name="message" id="message" required placeholder="Message"></textarea>
+                        <span style="padding: 10px; display: flex; color: #f2f2f2; justify-content: flex-end">0/100</span>
                     </div>
-                    <button type="submit" onclick="javascript: return submitContact(); return false;">SUBMIT<i
-                            class="ion-arrow-right-b"></i></button>
+                    <button type="submit" onclick="javascript: submitForm()" id="BtnSendMail">SUBMIT<i class="ion-arrow-right-b"></i>
+                    </button>
                 </form>
             </div>
             <p>Or you can get in touch with me at <strong><u>fede.lopez89@gmail.com</u></strong>
@@ -475,7 +474,7 @@
             nav.style.backgroundColor = 'black';
         } else {
             nav.style.backgroundColor = 'transparent';
-        }        
+        }
     })
 
     //Get the button:
@@ -486,7 +485,7 @@
     window.onscroll = function () { scrollFunction() };
 
     function scrollFunction() {
-        if (document.body.scrollTop > 20 || 
+        if (document.body.scrollTop > 20 ||
             document.documentElement.scrollTop > 20) {
             mybutton.style.display = "block";
         } else {
@@ -499,7 +498,6 @@
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
-
 </script>
 
 </html>
