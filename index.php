@@ -397,7 +397,7 @@
                 <h1>contact</h1>
             </div>
             <div class="container">
-                <form class="contact-form" onsubmit="javascript: return false;" method="post">
+                <form class="contact-form" action="php/sendMail.php" method="post">
                     <div class="contact-form-control">
                         <label></label>
                         <input type="text" class="form-control" name="name" id="name" required placeholder="Fullname">
@@ -415,7 +415,7 @@
                         <textarea class="form-control" name="message" id="message" required placeholder="Message"></textarea>
                         <span style="padding: 10px; display: flex; color: #f2f2f2; justify-content: flex-end">0/100</span>
                     </div>
-                    <button type="submit" onclick="javascript: submitForm()" id="BtnSendMail">SUBMIT<i class="ion-arrow-right-b"></i>
+                    <button type="submit" id="BtnSendMail">SUBMIT<i class="ion-arrow-right-b"></i>
                     </button>
                 </form>
             </div>
