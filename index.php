@@ -296,6 +296,20 @@
                 </div>
                 <div class="exp-details">
                     <div class="exp-details-left">
+                        <h5>February 2018 - Present</h5>
+                        <h6>Buenos Aires, Argentina</h6>
+                    </div>
+                    <div class="exp-details-right">
+                        <h4>fullstack web developer</h4>
+                        <h5>freelance</h5>
+                        <p>Development of applications and websites applying the latest technologies on the market. 
+                           I give complete solutions, front-end and backend.
+                           Some of the tools and languages used: HTML5, CSS, GitHub, React Js, Node Js, Mongodb, among others.
+                        </p>
+                    </div>
+                </div>                
+                <div class="exp-details">
+                    <div class="exp-details-left">
                         <h5>February 2015 - Present</h5>
                         <h6>Buenos Aires, Argentina</h6>
                     </div>

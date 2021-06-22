@@ -23,5 +23,9 @@ if ($sent)
   echo 'Email sent correctly';
 else
   echo 'Error sending the email';
+  echo $to;
+  echo $email_subject;
+  echo $email_body;
+  echo $headers;
 
 ?>
