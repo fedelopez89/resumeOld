@@ -533,7 +533,11 @@ h5[data-value]:after {
     text-transform: uppercase;
 }
 
-.exp-details-right>h5 {
+.exp-details-right>a {
+    text-decoration: none;
+}
+
+.exp-details-right>a>h5 {
     color: black;
     font-weight: 500;
     margin: 11px 0 15px 0;
@@ -647,7 +651,11 @@ h5[data-value]:after {
     text-transform: uppercase;
 }
 
-.edu-details-right>h5 {
+.edu-details-right>a {
+    text-decoration: none;
+}
+
+.edu-details-right>a>h5 {
     color: grey;
     font-weight: 500;
     margin: 11px 0 15px 0;
