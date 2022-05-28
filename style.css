@@ -443,11 +443,13 @@ h5[data-value]:after {
 }
 
 #experience>button {
+    align-items: center;
     align-self: center;
     display: flex;
     border-radius: 4%;
     justify-content: space-around;
-    width: 100px;
+    width: 120px;
+    height: 45px;
 }
 
 #experience>button>a {
@@ -455,6 +457,7 @@ h5[data-value]:after {
     font-size: 70%;
     font-weight: 600;
     line-height: 30px;
+    text-decoration: none;
 }
 
 .exp-form {
